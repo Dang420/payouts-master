@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" class=""><head><script>window.livecodes = window.livecodes || {};</script><title>Untitled Project</title><meta name="title" content="Untitled Project"><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" href="./style.css"><script src="https://cdn.jsdelivr.net/npm/es-module-shims@1.10.0/dist/es-module-shims.js" async=""></script><script type="importmap">{
+  "imports": {}
+}</script></head><body>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payout Master | Terminal</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <div class="master-wrapper">
+        <header>
+            <div class="logo">PAYOUT<span>MASTER</span></div>
+            <div class="status-pill">
+                <div id="connectionDot" class="dot"></div>
+                <span id="statusText">Termux: Offline</span>
+            </div>
+        </header>
+
+        <main>
+            <section class="control-panel">
+                <h2>Execute Payout</h2>
+                <form id="payoutForm">
+                    <div class="input-group">
+                        <label>Recipient Email</label>
+                        <input type="email" id="email" placeholder="user@example.com" required="">
+                    </div>
+                    
+                    <div class="row">
+                        <div class="input-group">
+                            <label>Amount (USD)</label>
+                            <input type="number" id="amount" placeholder="0.00" step="0.01" required="">
+                        </div>
+                        <div class="input-group">
+                            <label>Reward Type</label>
+                            <select id="type">
+                                <option value="Visa">Visa Prepaid</option>
+                                <option value="Amazon">Amazon GC</option>
+                                <option value="Walmart">Walmart GC</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="sendBtn">Confirm &amp; Execute</button>
+                </form>
+            </section>
+
+            <section class="console-wrapper">
+                <h3>Live System Logs</h3>
+                <div id="terminal" class="terminal-body">
+                    <div class="log-line system">[SYSTEM] Awaiting handshake...</div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+
+
+<script src="./script.js" type="module"></script></body></html>
